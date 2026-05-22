@@ -1,3 +1,7 @@
+/*
+	Software escrito para simular torneios 
+*/
+
 #include <stdio.h> 
 #include <stdlib.h> 
 #include <wchar.h> 

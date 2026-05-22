@@ -1,5 +1,5 @@
 /*
-Objetivo: Criar uma lista de contatos personalizada
+Objetivo: Criar uma lista de contatos personalizada  
 */
 #include<stdio.h>
 #include<stdlib.h>
