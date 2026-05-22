@@ -1,5 +1,7 @@
 /*
 Objetivo: Simular torneios 
+
+Esse código fonte utiliza valores e cálculos aleatórios e não se baseia em nenhum tipo de torneio pré-existente 
 */
 
 #include <stdio.h> 
