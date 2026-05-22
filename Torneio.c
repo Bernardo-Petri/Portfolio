@@ -1,5 +1,5 @@
 /*
-	Software escrito para simular torneios 
+Objetivo: Simular torneios 
 */
 
 #include <stdio.h> 
