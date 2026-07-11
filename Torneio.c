@@ -1,12 +1,12 @@
-/*
-Objetivo: Simular torneios 
-*/
-
 #include <stdio.h> 
 #include <stdlib.h> 
 #include <wchar.h> 
 #include <locale.h>
 #include <time.h>
+
+/*
+	Software escrito para simular torneios 
+*/
 
 int potencia2 (int);
 void correcao(wchar_t *);
@@ -39,7 +39,13 @@ int main(){
 	}
 	printf("\nDigite os nomes dos competidores:\n");
 	nomescompetidores(competidores, nometemp, quant);
+	
+	printf("\n\nCompetidores registrados:\n");
+	for(int i = 0 ; i < quant ; ++i){
+		wprintf(L"%s\n", *(competidores+i) );
+	}
 	printf("\n\n");
+
 	vencedor = simulacao(competidores, posComps, quant, 0, quant-1, 0); 
 	wprintf(L"\n\nO Campeão do Torneio é: %ls\n\n", *(competidores+vencedor) );
 	
@@ -187,7 +193,7 @@ void nomescompetidores(wchar_t ** competidores, wchar_t * nometemp, int quant){
 		wprintf(L"Competidor nº %d: ", (i+1) );
 		fgetws(nometemp, 80, stdin);
 		correcao(nometemp);
-		tam = wcslen(nometemp);
+		tam = (int) ( ( wcslen(nometemp) ) + 1 ) ;
 		*(competidores+i) = (wchar_t *) malloc( sizeof(wchar_t) * tam );
 		aux = *(competidores+i) ;
 		wcscpy(aux, nometemp);
